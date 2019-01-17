@@ -292,11 +292,57 @@ mongoose.connect(connectionString);
 //     }
 // )
 
-
-
-
 /////////////////////////////////////////////////
 //### Negative Selection
+
+// 1)
+
+// Vampire.find(
+//     { loves: 'ribbons', eye_color: {$nin: ['brown']}}, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 2)
+
+// Vampire.find(
+//     { location: {$nin: ['Rome']}}, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 3)
+
+// Vampire.find(
+//     { loves: {$nin: ['fancy cloaks','frilly shirtsleeves','appearing innocent','being tragic','brooding']}}, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 4)
+
+// Vampire.find(
+//     { victims: {$lte: 200}}, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
