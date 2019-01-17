@@ -343,18 +343,73 @@ mongoose.connect(connectionString);
 //     }
 // )
 
-
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REPLACE
+
+// 1)
+
+// Vampire.findOneAndUpdate(
+//     {name: 'Eve'},
+//     {$set: {'portrayed_by': 'Tilda Swinton'}},
+//     {new: true}, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 2)
+
+// Vampire.findOneAndUpdate(
+//     {gender: 'm'},
+//     {$set: {name: 'Guy Man', is_actually: 'were-lizard'}},
+//     {new: true}, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## UPDATE
 
+
+
+
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REMOVE
+
+// 1)
+
+// Vampire.findOneAndRemove(
+//     {hair_color: 'brown'}, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 2)
+
+// Vampire.deleteMany(
+//     {eye_color: 'blue'}, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
