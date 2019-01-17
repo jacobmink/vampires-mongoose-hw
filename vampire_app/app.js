@@ -240,11 +240,60 @@ mongoose.connect(connectionString);
 //     }
 // )
 
-
-
-
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
+
+// 1)
+
+// Vampire.find(
+//     { $or: [{loves: 'frilly shirtsleeves'},
+//             {loves: 'frilly collars'}] }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 2)
+
+// Vampire.find(
+//     {loves: 'brooding'}, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 3)
+
+// Vampire.find(
+//     { loves: {$in: ['appearing innocent','trickery','lurking in rotting mansions','R&B music'] } }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 4)
+
+// Vampire.find(
+//     { loves: {$in: ['fancy cloaks'], $nin: ['top hats','virgin blood'] } }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+
+
 
 /////////////////////////////////////////////////
 //### Negative Selection
