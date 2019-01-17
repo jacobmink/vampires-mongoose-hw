@@ -185,14 +185,63 @@ mongoose.connect(connectionString);
 //     }
 // )
 
-
-
-
-
-
-
 /////////////////////////////////////////////////
 // ### Select with OR
+
+// 1)
+
+// Vampire.find(
+//     { $or: [{location: 'New York, New York, US'},
+//             {location: 'New Orleans, Louisiana, US'}] }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 2)
+
+// Vampire.find(
+//     { $or: [{loves: 'brooding'},
+//             {loves: 'being tragic'}] }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 3)
+
+// Vampire.find(
+//     { $or: [{loves: 'marshmallows'},
+//             {victims: {$gt: 1000}}] }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 4)
+
+// Vampire.find(
+//     { $or: [{hair_color: 'red'},
+//             {eye_color: 'green'}] }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+
+
 
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
