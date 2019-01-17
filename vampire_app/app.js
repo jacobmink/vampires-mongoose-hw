@@ -134,16 +134,62 @@ mongoose.connect(connectionString);
 //     }
 // )
 
-
-
-
-
-
-
-
-
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
+
+// 1)
+
+// Vampire.find(
+//     {title: {$exists: true} }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 2)
+
+// Vampire.find(
+//     {victims: {$exists: false} }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 3)
+
+// Vampire.find(
+//     {victims: {$exists: false}, title: {$exists: false} }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+// 4)
+
+// Vampire.find(
+//     {victims: {$exists: true, $gt: 1000} }, (err,found)=>{
+//         if(err){
+//             console.log(err);
+//         }
+//         console.log(found);
+//         mongoose.connection.close();
+//     }
+// )
+
+
+
+
+
+
 
 /////////////////////////////////////////////////
 // ### Select with OR
